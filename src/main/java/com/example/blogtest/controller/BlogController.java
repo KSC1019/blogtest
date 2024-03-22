@@ -5,12 +5,14 @@ import com.example.blogtest.dto.ArticleRequest;
 import com.example.blogtest.dto.ArticleResponse;
 import com.example.blogtest.dto.UpdateArticle;
 import com.example.blogtest.service.BlogService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Tag(name = "블로그 컨트롤러")
 @RestController		// HTTP Response Body에 객체 데이터를 JSON 형식으로 반환하는 컨트롤러
 public class BlogController {
     private BlogService blogService;
